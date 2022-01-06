@@ -183,6 +183,8 @@ class st_elements:
 
 if __name__ == '__main__':
     # streamlit run f:/pycode/模型表数据读写/streamlit_server.py
-
-    tb = T('F:\pycode\模型表数据读写\data\models_dict.txt')
-    my_st = st_elements()
+    # 'F:\pycode\模型表数据读写\data\models_dict.txt'
+    main_1 = st.text_input('请输入文件地址:', '',help='模型导出excel地址',key='main_1')
+    if main_1:
+        tb = T(main_1)
+        my_st = st_elements()
